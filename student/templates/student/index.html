@@ -1,0 +1,18 @@
+{% extends "base1.html" %} {% load staticfiles %} 
+
+
+
+{% block content %}
+
+<div>
+  <br>
+  <h1>
+    List of Students
+  </h1>
+  <ul>
+    {%for Student in all_students %}
+    <li><a href="/student/{{Student.zID}}"> {{Student.zID}} {{Student.f_name}} {{Student.l_name}}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}
